@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STREAM - The Turbo Search Engine</title>
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet"> 
+</head>
+<style>
+	html{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #00B9FF;
+		background-image: linear-gradient(to top right, #00B9FF , #00BF40);
+		background-repeat: no-repeat;
+	}
+	div[type=render]{
+		opacity: 0;
+	}
+	div[type=card]{
+		width: 89%;
+		max-height: 200px;
+		background-color: white;
+		border-radius: 10px;
+		padding: 10px;
+		height: auto;
+		box-shadow: 0px 5px 20px grey;
+		text-align: center;
+	}
+	</style>
+<body>
+	<script type="text/javascript">
+		// Prevent variables from being global      
+(function () {
+
+      /*
+          1. Inject CSS which makes iframe invisible
+      */
+    
+    var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || 
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '&shy;<style> iframe { visibility: hidden; height: 0px; width: 0px; } div[type=card] { width: 1px; height: 1px; opacity: 0.6; bottom: 10%; display: inline-block; }</style>';
+
+    ref.parentNode.insertBefore(div, ref);
+
+        
+    /*
+        2. When window loads, remove that CSS, 
+           making iframe visible again
+    */
+    
+    window.onload = function() {
+        div.parentNode.removeChild(div);
+    }
+    
+})();</script>
+		<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
+	<center>
+	<h1 style="font-family: 'Rubik', Sans Serif; font-weight: 700; color: white; font-size: 45px; display: inline-block;">STREAM</h1><h1 style="font-family: 'Rubik', Sans Serif; font-weight: 100; color: white; font-size: 45px; display: inline-block;">UK</h1>
+	</center>
+		<center><input placeholder="Search the web..." id="searchbar" style="border-radius: 10px; border: 0; padding: 10px; width: 89%; font-family: 'Rubik', Sans Serif; display: block; box-shadow: 0px 5px 20px grey;"><script type="text/javascript">
+	var input = document.getElementById("searchbar");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+var input = document.getElementById("searchbar").value;
+     window.location = "https://streamcompany.github.io/stream/gbr?q=" + input;
+}
+});</script></input></center>
+	<center>
+	<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
+	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Rubik&units=uk" frameborder="0"></iframe></div>
+	<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://streamcompany.github.io/projectseis/images/phone.html" frameborder="0"></iframe></div></center>
+</body>
+</html>
