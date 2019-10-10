@@ -27,6 +27,38 @@
 		display: inline-block;
 		box-shadow: 0px 5px 20px grey;
 	}
+		div[type=s1card]{
+		max-width: 500px;
+		height: 200px;
+		background-color: white;
+		border-radius: 10px;
+		padding: 7px;
+		height: auto;
+		display: inline-block;
+		box-shadow: 0px 5px 20px grey;
+	}
+			div[type=s2card]{
+		max-width: 500px;
+		max-height: 200px;
+		background-color: white;
+		border-radius: 10px;
+		padding: 7px;
+		height: auto;
+		display: inline-block;
+		box-shadow: 0px 5px 20px grey;
+	}
+	.sbutton{
+				max-width: 300px;
+		max-height: 200px;
+		background-color: white;
+		border-radius: 10px;
+		padding: 10px;
+		height: auto;
+		display: inline-block;
+		box-shadow: 0px 5px 20px grey;
+		border: 0;
+		font-family: 'Rubik', Sans Serif;
+	}
 	</style>
 <body>
 	<script type="text/javascript">
@@ -41,7 +73,7 @@
         ref = document.getElementsByTagName('base')[0] || 
               document.getElementsByTagName('script')[0];
 
-    div.innerHTML = '&shy;<style> iframe { visibility: hidden; height: 0px; width: 0px; } div[type=card] { width: 1px; height: 1px; opacity: 0.6; }</style>';
+    div.innerHTML = '&shy;<style> iframe { visibility: hidden; height: 0px; width: 0px; } div[type=card] { width: 1px; height: 1px; opacity: 0.6; } div[type=s1card] { width: 1px; height: 1px; opacity: 0.6; padding: 10px; } div[type=s2card] { width: 1px; height: 1px; opacity: 0.6; padding: 10px; } .scard { display: none; }</style>';
 
     ref.parentNode.insertBefore(div, ref);
 
@@ -70,9 +102,28 @@ var input = document.getElementById("searchbar").value;
      window.location = "https://streamcompany.github.io/stream/gbr?q=" + input;
 }
 });</script></input>
-	<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
+	<H3 style="font-family: 'Rubik', Sans Serif; color: white">Overview</H3>
 	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Rubik&units=uk" frameborder="0"></iframe></div>
 	<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://streamcompany.github.io/projectseis/images/phone.html" frameborder="0"></iframe></div>
+	<h3 style="font-family: 'Rubik'; color: white">Service News</h3>
+	
+	<div type="s1card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif; vertical-align: top;">An unexpected outage occured.</h3><p style="font-family: 'Rubik'">STREAM & STREAM Services are down in the United Kingdom, due to an network issue at our data center in Barking. We are working on a fix until then. You should be able to access all services normally.</p>
+	
+		</div></div><div type="render" style="display: inline-block;">.</div>
+	
+	<div type="s2card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif">Goodbye BEATPLANET and Movii</h3><p style="font-family: 'Rubik', Sans Serif;">BEATPLANET and Movii Inc. have ceased trading under the STREAM Family and services such as STREAMBeats, U Music and Movii are no longer supplied with content, users are allowed to grab a copy of their data and content within the next 14 days of their last login.</p></div></div>
+	
+	<h3 style="font-family: 'Rubik'; color: white">STREAM + You</h3>
+	<button class="sbutton" onClick="privacy()"><script type="text/javascript">
+		function privacy() {
+			window.location.replace("http://privacy.streamsearch.cf/")
+		}
+		</script>Privacy & Supplier Responsibilities</button>
+	<button class="sbutton" onClick="feed()"><script type="text/javascript">
+				function feed() {
+			window.location.replace("https://forms.gle/YjJL5Fbvm4WwL8ei6")
+		}
+		</script>Send Feedback</button>
 			</blockquote>
 </body>
 </html>
