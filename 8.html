@@ -12,6 +12,7 @@
 		padding: 0;
 		background-color: #00B9FF;
 		background-image: linear-gradient(to top right, #00B9FF , #00BF40);
+		background-size: contain;
 		background-repeat: no-repeat;
 	}
 	div[type=render]{
@@ -58,6 +59,33 @@
 		box-shadow: 0px 5px 20px grey;
 		border: 0;
 		font-family: 'Rubik', Sans Serif;
+	}
+		.iv1invert{
+				max-width: 300px;
+		max-height: 200px;
+		background-color: black;
+			color: white;
+		border-radius: 10px;
+		padding: 10px;
+		height: auto;
+		display: inline-block;
+		box-shadow: 0px 5px 20px grey;
+		border: 0;
+		font-family: 'Rubik', Sans Serif;
+	}
+			.iv2invert{
+				max-width: 300px;
+		max-height: 200px;
+		background-color: black;
+			color: white;
+		border-radius: 10px;
+		padding: 10px;
+		height: auto;
+		display: inline-block;
+		box-shadow: 0px 5px 20px grey;
+		border: 0;
+		font-family: 'Rubik', Sans Serif;
+				display: none;
 	}
 	</style>
 <body>
@@ -124,6 +152,36 @@ var input = document.getElementById("searchbar").value;
 			window.location.replace("https://forms.gle/YjJL5Fbvm4WwL8ei6")
 		}
 		</script>Send Feedback</button>
+	
+	<h3 style="font-family: 'Rubik'; color: white">Visual Imparities</h3>
+	<button class="iv1invert" onClick="invert()">
+		<Script>    
+			function invert() {
+var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || 
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '<style> html { filter: invert(100%); backdrop-filter: invert(100%); -webkit-filter: invert(100%); background-color: #D05AB4; background-image: linear-gradient(to top right, #D05AB4 , #E67339); } .iv1invert{ display: none; } .iv2invert{ display: inline-block; }</style>';
+
+    ref.parentNode.insertBefore(div, ref);
+				}
+		</Script>
+		
+		Invert</button>
+		<button class="iv2invert" onClick="inverti()">
+		<Script>
+			function inverti() {
+var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || 
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '<style> html { filter: invert(0%); backdrop-filter: invert(0%); -webkit-filter: invert(0%); background-color: #00B9FF; background-image: linear-gradient(to top right, #00B9FF , #00BF40); } .iv1invert{ display: inline-block; } .iv2invert{ display: none; }</style>';
+
+    ref.parentNode.insertBefore(div, ref);
+				}
+		</Script>
+		
+		Devert</button>
 			</blockquote>
 </body>
 </html>
