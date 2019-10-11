@@ -101,7 +101,7 @@
         ref = document.getElementsByTagName('base')[0] || 
               document.getElementsByTagName('script')[0];
 
-    div.innerHTML = '&shy;<style> iframe { visibility: hidden; height: 0px; width: 0px; } div[type=card] { width: 1px; height: 1px; opacity: 0.6; } div[type=s1card] { width: 1px; height: 1px; opacity: 0.6; padding: 10px; } div[type=s2card] { width: 1px; height: 1px; opacity: 0.6; padding: 10px; } .scard { display: none; }</style>';
+    div.innerHTML = '<style> iframe { visibility: hidden; height: 0px; width: 0px; } div[type=card] { width: 1px; height: 1px; opacity: 0.6; } div[type=s1card] { width: 1px; height: 1px; opacity: 0.6; padding: 10px; } div[type=s2card] { width: 1px; height: 1px; opacity: 0.6; padding: 10px; } .scard { display: none; }</style>';
 
     ref.parentNode.insertBefore(div, ref);
 
@@ -181,7 +181,7 @@ var div = document.createElement('div'),
 				}
 		</Script>
 		
-		Devert</button>
+		Revert</button>
 			</blockquote>
 </body>
 </html>
