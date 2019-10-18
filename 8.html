@@ -133,6 +133,8 @@ var input = document.getElementById("searchbar").value;
 	<H3 style="font-family: 'Rubik', Sans Serif; color: white">Overview</H3>
 	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Rubik&units=uk" frameborder="0"></iframe></div>
 	<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://streamcompany.github.io/projectseis/images/phone.html" frameborder="0"></iframe></div>
+	.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200px" width="200px" src="http://cdn.ads.streamsearch.cf/" frameborder="0"></iframe></div>
+	
 	<h3 style="font-family: 'Rubik'; color: white">Service News</h3>
 	
 	<div type="s1card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif; vertical-align: top;">An unexpected outage occured.</h3><p style="font-family: 'Rubik'">STREAM & STREAM Services are down in the United Kingdom, due to an network issue at our data center in Barking. We are working on a fix until then. You should be able to access all services normally.</p>
@@ -171,14 +173,8 @@ var div = document.createElement('div'),
 		<button class="iv2invert" onClick="inverti()">
 		<Script>
 			function inverti() {
-var div = document.createElement('div'),
-        ref = document.getElementsByTagName('base')[0] || 
-              document.getElementsByTagName('script')[0];
-
-    div.innerHTML = '<style> html { filter: invert(0%); backdrop-filter: invert(0%); -webkit-filter: invert(0%); background-color: #00B9FF; background-image: linear-gradient(to top right, #00B9FF , #00BF40); } .iv1invert{ display: inline-block; } .iv2invert{ display: none; }</style>';
-
-    ref.parentNode.insertBefore(div, ref);
-				}
+				window.location.replace(document.URL)
+			}
 		</Script>
 		
 		Revert</button>
