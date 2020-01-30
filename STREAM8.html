@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>STREAM - The Turbo Search Engine</title>
 	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 	<style>
@@ -11,8 +9,7 @@
   background-color: #67B26F; /* For browsers that do not support gradients */
   background-image: linear-gradient(to top right, #67B26F, #4ca2cd); /* Standard syntax (must be last) */
 			height: 100%;
-			padding:0px;
-				background-repeat: no-repeat;
+				background-repeat: no-repeat
 		}
 		
 div {
@@ -88,10 +85,9 @@ div {
   }
 }
 		input[type=text], select {
-			z-index: 9999;
 			box-shadow: 0px 0px 0px 0px #969696;
   	-webkit-box-shadow: 0px 0px 0px 0px #969696;
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0px;
   display: inline-block;
@@ -101,10 +97,9 @@ div {
 						opacity: 1;
 }
 		input[type=text]:hover {
-			z-index: 9999;
 			box-shadow: 0px 0px 0px 0px #969696;
   	-webkit-box-shadow: 0px 0px 0px 0px #969696;
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0px;
   display: inline-block;
@@ -114,10 +109,9 @@ div {
 						opacity: 1;
 }
 		input[type=text] {
-			z-index: 9999;
 			box-shadow: 0px 3px 5px 1px #969696;
   	-webkit-box-shadow: 0px 3px 5px 1px #969696;
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0px;
   display: inline-block;
@@ -133,7 +127,7 @@ div {
   border-radius: 10px;
   background-color: #FFFFFF;
   padding: 20px;
-			
+			display: inline-block;
 			opacity: 0.9;
 }
 		div[type=card]:hover {
@@ -142,7 +136,7 @@ div {
   border-radius: 10px;
   background-color: #FFFFFF;
   padding: 20px;
-			
+			display: inline-block;
 			opacity: 1;
 }
 		div[type=topheader] {
@@ -150,19 +144,15 @@ div {
 			font: bold;
 			text
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
 </style>
 </head>
-<body>	
+<body>
+  <blockquote>
+    <blockquote>	
 <div type="topheader">
   <h1 style="style">&nbsp;</h1>
-	<h1 style="color: white; font-weight: 500; font-size: 45px; text-align:center"><strong>STREAM</strong></h1>
-	<div class="header" id="myHeader">	
-	<input name="searchbar" placeholder="Search the web..." style="font-family: 'Rubik', sans serrif" id="searchbar" type="text"><script type="text/javascript">
+	<h1 style="color: white; font-weight: 500; font-size: 45px"><strong>STREAM</strong></h1>
+		<input name="searchbar" style="font-family: 'Rubik', sans serrif" id="searchbar" type="text"><script type="text/javascript">
 	var input = document.getElementById("searchbar");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -171,34 +161,16 @@ var input = document.getElementById("searchbar").value;
      window.location = "https://streamcompany.github.io/stream/gbr?q=" + input;
 }
 });</script></input>
-	</div>
 		  <p height="0"></p>
 </div>
-	<div class="content" width=100% height="100%" id="content" type="cardbackg">
-	  <div type="card" width="100%">
+	  <div type="card" width="20%">
 	    <iframe id="forecast_embed" frameborder="0" height="200" width="100%" scrolling="no" style="overflow: hidden;" src="https://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=London&color=#00aaff&font=Rubik&units=uk"></iframe>
 	  </div>
-	<p></p>
-	  <div type="card" width="100%" style="text-align: center;"><iframe scrolling="no" style="font-family: 'Rubik', sans serif; overflow: hidden" id="beaker" frameborder="0" height="200" width="100%" src="images/beaker.html"></iframe>
+	  <div type="card" width="20%" style="text-align: center;"><iframe scrolling="no" style="font-family: 'Rubik', sans serif; overflow: hidden" id="phonead" frameborder="0" height="200" width="100%" src="images/phone.html"></iframe>
 	  </div>
-		</div>
-		<script type="text/javascript">// When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
-
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}</script>
+		  <div type="card" width="20%" style="text-align: center;"><iframe scrolling="no" style="font-family: 'Rubik', sans serif; overflow: hidden" id="beaker" frameborder="0" height="200" width="100%" src="images/beaker.html">
+	  </div>
+			 </blockquote>
+  </blockquote>
 	</body>
 </html>
-

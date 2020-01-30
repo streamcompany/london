@@ -96,7 +96,6 @@
       /*
           1. Inject CSS which makes iframe invisible
       */
-    
     var div = document.createElement('div'),
         ref = document.getElementsByTagName('base')[0] || 
               document.getElementsByTagName('script')[0];
@@ -117,20 +116,94 @@
     
 })();</script>
 	<blockquote>
+        <img id="loading" style="display: none" width="20px" height="20px" src="https://cdnstream.github.io/gui/stream/search/8/785.gif"></img>
+        <img id="backbutt" style="display: none" width="20px" height="20px" src="https://cdnstream.github.io/gui/stream/search/8/back.png"></img>
 	<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
 		<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
 		<div type="render">THIS VERSION HAS BEEN MODIFIED!!! DO NOT USE THIS VERSION OF STREAM</div>
 	<h1 style="font-family: 'Rubik', Sans Serif; font-weight: 700; color: white; font-size: 45px; display: inline-block;">STREAM8</h1><h1 style="font-family: 'Rubik', Sans Serif; font-weight: 100; color: white; font-size: 45px; display: inline-block;">UK</h1>
+        <div style="border-radius: 10px; border: 0; width: 45%; box-shadow: 0px 5px 20px grey; background-color: white;">
+		<input placeholder="Search the web..." id="searchbar" style="border: 0; width: 90%; display: inline-block; font-family: 'Rubik', Sans Serif; background: 0;  padding: 10px; margin-right: 20px;"><script type="text/javascript">
+	var input = document.getElementById("searchbar");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+var input = document.getElementById("searchbar").value;
+        var uri = encodeURI(input);
+     document.getElementById('cards').setAttribute("style", "display: none;");
+        document.getElementById('loading').setAttribute("style", "display: inline; position: absolute; top: 190px; left: 43%;");
+        document.getElementById('backbutt').setAttribute("style", "display: none;");
+        document.getElementById('results').setAttribute("style", "display: inline-block; width: 100%;");
+        document.getElementById('searchresults').setAttribute("src", "https://cdnstream.github.io/gui/stream/search/8/box/?q=" + uri);
+}
+});</script></input>
+        </div>
+    
+    <div id="cards" style="">
 	<H3 style="font-family: 'Rubik', Sans Serif; color: white">Overview</H3>
 	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Rubik&units=uk" frameborder="0"></iframe></div>
 	<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://streamcompany.github.io/projectseis/images/phone.html" frameborder="0"></iframe></div>
-	.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200px" width="200px" src="https://cdnstream.github.io/advertisingnetwork/ad-box.html" frameborder="0"></iframe></div>
+	.<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200px" width="200px" src="https://cdnstream.github.io/advertisingnetwork/ad-box.html" frameborder="0"></iframe></div>
 	
-	<h3 style="font-family: 'Rubik'; color: white">Service News</h3>
+	<h3 style="font-family: 'Rubik'; color: white">Service & Supplier Information</h3>
 	
-	<div type="s1card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif; vertical-align: top;">STREAM Group has ended.</h3><p style="font-family: 'Rubik'">I had to make this decision as it was going no-where. Guides for obsolete products will be crafted at a later point in time. As for now, I am working on something private. ~ Ejaz</p>
+	<div type="s1card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif; vertical-align: top;">DNS Under Maintenance</h3><p style="font-family: 'Rubik'">Our DNS Hosting Provider is down for maintenance. This may affect performance of our services. We are actively working with Afraid to get it all up and running.</p>
+        </div></div>
 	
-		</div></div><div type="render" style="display: inline-block;">.</div>
+	<h3 style="font-family: 'Rubik'; color: white">STREAM + You</h3>
+	<button class="sbutton" onClick="privacy()"><script type="text/javascript">
+		function privacy() {
+			window.location.replace("http://privacy.streamsearch.cf/")
+		}
+		</script>Privacy & Supplier Responsibilities</button>
+	<button class="sbutton" onClick="feed()"><script type="text/javascript">
+				function feed() {
+			window.location.replace("https://forms.gle/YjJL5Fbvm4WwL8ei6")
+		}
+		</script>Send Feedback</button>
+	
+	<h3 style="font-family: 'Rubik'; color: white">Visual Imparities</h3>
+	<button class="iv1invert" onClick="invert()">
+		<Script>    
+			function invert() {
+var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || 
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '<style> html { filter: invert(100%); backdrop-filter: invert(100%); -webkit-filter: invert(100%); background-color: #D05AB4; background-image: linear-gradient(to top right, #D05AB4 , #E67339); } .iv1invert{ display: none; } .iv2invert{ display: inline-block; }</style>';
+
+    ref.parentNode.insertBefore(div, ref);
+				}
+		</Script>
+		
+		Invert</button>
+		<button class="iv2invert" onClick="inverti()">
+		<Script>
+			function inverti() {
+				window.location.replace(document.URL)
+			}
+		</Script>
+		
+		Revert</button>
+    </div>
+    <div id="results" style="width: 100%; display: none;">
+          <H3 style="font-family: 'Rubik', Sans Serif; color: white">Search Results</H3>
+        <div style="height: 900px; width: 100%">
+            <script type="text/javascript">
+        function loadRemove() {
+            document.getElementById('loading').setAttribute("style", "display: none;");if ( !!window.variableName )
+                if ( !!window.g ) {
+            document.getElementById('backbutt').setAttribute("style", "display: inline; position: absolute; top: 190px; left: 43%;");
+        } else{
+            var g = "g"
+        }
+        }
+        </script>
+    <iframe onLoad="loadRemove()" id="searchresults" frameborder="0" style="box-shadow: 0px 5px 20px grey; width: 60%; height: inherit; background-color: white; border-radius: 10px;" src="https://cdnstream.github.io/gui/stream/search/8/box/?q=g">
+            </iframe>
+        </div>
+    </div>
+    </body>
 			</blockquote>
 </body>
 </html>

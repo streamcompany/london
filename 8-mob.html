@@ -119,16 +119,71 @@
 	<center>
 	<h1 style="font-family: 'Rubik', Sans Serif; font-weight: 700; color: white; font-size: 45px; display: inline-block;">STREAM</h1><h1 style="font-family: 'Rubik', Sans Serif; font-weight: 100; color: white; font-size: 45px; display: inline-block;">UK</h1>
 	</center>
-		
-	<center><h3 style="font-family: 'Rubik'; color: white">Service News</h3>
-		<div type="s1card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif; vertical-align: top;">STREAM Group has been ended</h3><p style="font-family: 'Rubik', Sans Serif"> I had to make this decision as it was going no-where. Guides for obsolete products will be crafted at a later point in time. As for now, I am working on something private. ~ Ejaz</p></div></div>	
-
-
+		<center><input placeholder="Search the web..." id="searchbar" style="border-radius: 10px; border: 0; padding: 10px; width: 89%; font-family: 'Rubik', Sans Serif; display: block; box-shadow: 0px 5px 20px grey;"><script type="text/javascript">
+	var input = document.getElementById("searchbar");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+var input = document.getElementById("searchbar").value;
+     window.location = "https://streamcompany.github.io/stream/gbr?q=" + input;
+}
+});</script></input></center>
+	<center>
 	<H3 style="font-family: 'Rubik', Sans Serif; color: white">Overview</H3>
+	<div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://forecast.io/embed/#lat=51.50642&lon=-0.12721&name=London&color=#00aaff&font=Rubik&units=uk" frameborder="0"></iframe></div>
+	<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" height="200" src="https://streamcompany.github.io/projectseis/images/phone.html" frameborder="0"></iframe></div>
 		<div type="render" style="display: inline-block;">.</div><div type="card"><iframe id="forecast_embed" scrolling="no" style="overflow: hidden;" width="200px" height="200px" src="https://cdnstream.github.io/advertisingnetwork/ad-box" frameborder="0"></iframe></div>
+	
+					<h3 style="font-family: 'Rubik'; color: white">Visual Imparities</h3>
+	<button class="iv1invert" onClick="invert()">
+		<Script>    
+			function invert() {
+var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || 
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '<style> html { filter: invert(100%); backdrop-filter: invert(100%); -webkit-filter: invert(100%); background-color: #D05AB4; background-image: linear-gradient(to top right, #D05AB4 , #E67339); } .iv1invert{ display: none; } .iv2invert{ display: inline-block; }</style>';
+
+    ref.parentNode.insertBefore(div, ref);
+				}
+		</Script>
+		
+		Invert</button>
+		<button class="iv2invert" onClick="inverti()">
+		<Script>
+			function inverti() {
+var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || 
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '<style> html { filter: invert(0%); backdrop-filter: invert(0%); -webkit-filter: invert(0%); background-color: #00B9FF; background-image: linear-gradient(to top right, #00B9FF , #00BF40); } .iv1invert{ display: inline-block; } .iv2invert{ display: none; }</style>';
+
+    ref.parentNode.insertBefore(div, ref);
+				}
+		</Script>
+		
+		Revert</button>
+		
+		<h3 style="font-family: 'Rubik'; color: white">Service News</h3>
+			<div type="s1card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif; vertical-align: top;">An unexpected outage occured.</h3><p style="font-family: 'Rubik'">STREAM & STREAM Services are down in the United Kingdom, due to an network issue at our data center in Barking. We are working on a fix until then. You should be able to access all services normally.</p></div></div>
+		
+		<div type="render">.</div>
+					<div type="s2card"><div class="scard"><h3 style="font-family: 'Rubik', Sans Serif">Goodbye BEATPLANET and Movii</h3><p style="font-family: 'Rubik', Sans Serif;">BEATPLANET and Movii Inc. have ceased trading under the STREAM Family and services such as STREAMBeats, U Music and Movii are no longer supplied with content, users are allowed to grab a copy of their data and content within the next 14 days of their last login.</p></div></div>
+		
 
 		
-		
+			<h3 style="font-family: 'Rubik'; color: white">STREAM + You</h3>
+	<button class="sbutton" onClick="privacy()"><script type="text/javascript">
+		function privacy() {
+			window.location.replace("http://privacy.streamsearch.cf/")
+		}
+		</script>Privacy & Supplier Responsibilities</button>
+		<div type="render">.</div>
+	<button class="sbutton" onClick="feed()"><script type="text/javascript">
+				function feed() {
+			window.location.replace("https://forms.gle/YjJL5Fbvm4WwL8ei6")
+		}
+		</script>Send Feedback</button>
 	</center>
 </body>
 </html>
